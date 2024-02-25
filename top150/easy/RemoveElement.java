@@ -5,7 +5,7 @@ https://leetcode.com/problems/remove-element/
 - I have used two pointer approach
 - i from 0 and j - from end
 - increment i if nums[i] not val
-- decrement j if num[i] == val
+- decrement j if num[j] == val
 - if nums[i] == val the copy num[j], incr i and dec j to move to the next
 - i <= j is required to handle edge cases, e.g. nums[] = {1} , val = 1
  */
@@ -17,7 +17,6 @@ public class RemoveElement {
 
         while (i <= j) {
             if(nums[j] == val) {
-                System.out.println("inside j=> " + j);
                 j--;
                 k++;
             }  else if (nums[i] == val) {
