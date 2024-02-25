@@ -1,4 +1,4 @@
-package leet.code.list150.medium;
+package leet.code.top150.medium;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

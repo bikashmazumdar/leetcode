@@ -1,4 +1,4 @@
-package leet.code.list150.easy;
+package leet.code.top150.easy;
 
 /*
 https://leetcode.com/problems/remove-element/
