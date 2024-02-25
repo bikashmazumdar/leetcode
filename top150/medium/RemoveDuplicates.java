@@ -29,4 +29,22 @@ public class RemoveDuplicates {
         }
         return k;
     }
+
+    public int removeElementSpaceOptimized(int [] nums) {
+        int count = 1;
+        int k = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i - 1] == nums[i]) {
+                count++;
+            } else {
+                count = 1;
+            }
+
+            if (count < 3) {
+                nums[k++] = nums[i];
+            }
+        }
+        return k;
+    }
 }
