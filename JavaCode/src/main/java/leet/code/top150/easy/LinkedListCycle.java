@@ -6,15 +6,17 @@ package leet.code.top150.easy;
  */
 
 
- class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-  }
+
 public class LinkedListCycle {
+
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
 
      /*
         slow and fast pointer approach
