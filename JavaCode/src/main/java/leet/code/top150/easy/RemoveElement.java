@@ -1,5 +1,7 @@
 package leet.code.top150.easy;
 
+import java.util.Arrays;
+
 /*
 https://leetcode.com/problems/remove-element/
 - I have used two pointer approach
@@ -13,19 +15,25 @@ public class RemoveElement {
 
     public int removeElement(int[] nums, int val) {
         int i = 0, j = nums.length - 1;
-        int k = 0;
-
-        while (i <= j) {
+        while(i <= j) {
             if(nums[j] == val) {
                 j--;
-                k++;
-            }  else if (nums[i] == val) {
+            } else if (nums[i] == val) {
                 nums[i++] = nums[j--];
-                k++;
             } else {
                 i++;
             }
         }
-        return nums.length - k;
+        return i;
+    }
+
+    public static void main(String[] args) {
+        RemoveElement removeElement = new RemoveElement();
+        int [] nums = {0,1,2,2,3,0,4,2};
+        int l = removeElement.removeElement(nums, 2);
+
+        Arrays.stream(nums)
+                .limit(l)
+                .forEach(e -> System.out.print(e +" "));
     }
 }
